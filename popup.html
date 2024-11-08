@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stop Distracting Me</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .toggle-button {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #e74c3c;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .toggle-button.active {
+        background-color: #2ecc71;
+      }
+
+      .settings-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      .settings-panel {
+        display: none;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      #urlList {
+        width: 100%;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="settings-icon">SETTINGS</div>
+    <button class="toggle-button">OFF</button>
+
+    <div class="settings-panel">
+      <h3>Blocked URLs</h3>
+      <textarea
+        id="urlList"
+        rows="5"
+        placeholder="Enter URLs to block (one per line)"></textarea>
+      <button id="saveSettings">Save</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

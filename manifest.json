@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Stop Distracting Me",
+  "version": "1.0",
+  "description": "Block distracting websites with a single click",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": { "default_popup": "popup.html" },
+  "icons": {},
+  "background": {
+    "service_worker": "background.js"
+  }
+}
